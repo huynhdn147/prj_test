@@ -83,9 +83,9 @@ class Header extends Component {
 
         return (
             <div className="header">
+                <img id="header-logo-img2" src="https://scontent.fhan1-1.fna.fbcdn.net/v/t39.30808-6/302104011_522951372969357_7606793892060228597_n.png?_nc_cat=102&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=yI22Iic9SrQAX9RZ7fv&_nc_ht=scontent.fhan1-1.fna&oh=00_AT8TOU7kY6OuIecsIxO7SY2s5SPI_APwDc-sHAl41A-P6g&oe=632C0048" alt="" />
                 <div className=" home-page">
-                    {/* <i class="icon fa fa-bars fa-fw  icon-nav-bar" aria-hidden="true" ></i> */}
-                    <Link to="/home" style={{ textDecoration: " none", textTransform: "uppercase" }}>Trang Chủ</Link>
+                <Link to="/home" style={{ textDecoration: "none", textTransform: "uppercase", textAlign:"center"}}>quản lý thanh toán công tác phí</Link>
                 </div>
                 <div className="logout_username">
                     {this.getTenUser()}

@@ -176,7 +176,7 @@ class QuanLyChiPhi extends Component {
         if (this.state.dataUsers.roleID === "RL01" || this.state.dataUsers.roleID === "RL05") {
             return (
                 <td>
-                    <div className="btn btn-warning btn-group" style={{ fontSize: "22px" }}>
+                        <div className="btn btn-warning btn-group">
                         <div className="fa fa-edit" data-toggle="modal" data-target="#sua" onClick={() => this.layDataSua(value)}>Sửa</div>
                         {/* <!-- begin them moi --> */}
                         <div class="modal fade" id="sua" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -220,7 +220,7 @@ class QuanLyChiPhi extends Component {
                             </div>
                         </div>
                         {/* end them moi */}                        </div>
-                    <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-danger btn-group ml-2">
                         <div className="fas fa-ban" onClick={() => this.onDelete(value.maChiPhi)}>Xóa</div>
                     </div>
                 </td>

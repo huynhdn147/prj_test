@@ -126,8 +126,10 @@ class QuanLyChuyenCongTac extends Component {
             dataSua.ngayKetThuc = this.state.ngayKetThuc;
             dataSua.moTa = this.state.moTa;
 
-            // console.log(dataSua);
+            
             this.setState({ dataSua: dataSua });
+            console.log(dataSua.ngayBatDau);
+            console.log(dataSua.ngayKetThuc);
             this.state.data.forEach((value) => {
                 if (value.maChuyenCongTac === dataSua.maChuyenCongTac) {
                     value.tenChuyenCongTac = dataSua.tenChuyenCongTac;
@@ -159,7 +161,7 @@ class QuanLyChuyenCongTac extends Component {
                 .then(() => { window.location.reload() })
 
                 .then((res) => this.props.alertOn_TrangThaiSuaThanhCong(res))
-                .catch(err => this.props.alertOn_TrangThaiSuaThatBai(err));
+                .catch(err => {this.props.alertOn_TrangThaiSuaThatBai(err)});
         }
     }
     onDelete = (maChuyenCongTac) => {
@@ -300,7 +302,7 @@ class QuanLyChuyenCongTac extends Component {
                                                                             <td>{value.maNhanVien}</td>
                                                                             <td>{value.tenNhanVien}</td>
                                                                             <td>
-                                                                                <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                                                                                <div className="btn btn-danger btn-group ml-2">
                                                                                     <div className="fa fa-edit" onClick={() => this.onDeleteNhanVienCongTac(value.maNhanVien)}  > Xóa</div>
                                                                                 </div>
                                                                             </td>
@@ -383,6 +385,7 @@ class QuanLyChuyenCongTac extends Component {
 
                                                         </div>
                                                         <div className="col-6" >
+                                                            {console.log(this.state.hienThiSuaUer.ngayBatDau)}
                                                             <p style={{ textAlign: 'left' }}>Thời gian bắt đầu</p>
                                                             <input type="date" className="form-control" name id aria-describedby="helpId" placeholder="Thời gian bắt đầu" name="ngayBatDau" Value={this.state.hienThiSuaUer.ngayBatDau} onChange={(value) => this.onChange(value)} />
                                                             <p style={{ textAlign: 'left' }}>Thời gian kết thúc</p>
@@ -416,10 +419,10 @@ class QuanLyChuyenCongTac extends Component {
                     {/* end Form sửa */}
                     {value.trangThai === "Chua thuc hien" ?
                         <div>
-                            <div className="btn btn-warning btn-group" style={{ fontSize: "22px" }} >
+                            <div className="btn btn-warning btn-group">
                                 <div className="fa fa-edit" data-toggle="modal" data-target="#sua" onClick={() => this.layDataSua(value)} >Sửa</div>
                             </div>
-                            <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                            <div className="btn btn-danger btn-group ml-2">
                                 <div className="fas fa-ban" onClick={() => this.onDelete(value.maChuyenCongTac)}> Xóa</div>
                             </div>
                         </div>

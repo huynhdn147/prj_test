@@ -19,7 +19,7 @@ class Home extends Component {
                     <div className="table-manager" style={{ padding: '0 25px 0 0' }}>
 
                         <div className="jumbotron content-home">
-                            <h1 className="display-3" style={{ fontWeight: "350", textTransform: "uppercase" }}>Hệ thống thanh toán công tác phí trường Đại học Thăng Long</h1>
+                            <h1 className="display-3" style={{ fontWeight: "350", textTransform: "uppercase" }}>PMNB: Thanh toán phí Công tác công ty Cổ phần Techasians</h1>
                             {/* <div className="btn btn-info" onClick={() => this.props.alertOn_TrangThaiThemMoiThatBai()}>click di</div>
                         <div className="btn btn-info" onClick={() => this.props.alertOff_TrangThaiThemMoiThatBai()}>click di</div> */}
 

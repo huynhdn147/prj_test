@@ -286,7 +286,7 @@ class NhanVienCongTac extends Component {
             return (
                 <td>
                     {value.trangThai === "Chua thuc hien" ?
-                        <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                        <div className="btn btn-danger btn-group">
                             <div className="fas fa-ban" onClick={() => this.onDelete(value.maChuyenCongTac, value.maNhanVien)}  > Xóa</div>
                         </div> : null
                     }

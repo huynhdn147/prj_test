@@ -43,21 +43,39 @@ export default class Nav extends Component {
 
         if (data.roleID === "RL02") {
             return (
-                <div className="list-group ">
-
-                    <a href="#" className="list-group-item list-group-item-action disabled mt-3">QLNV</a>
-                    <Link to="/quanlyphongban" className="list-group-item list-group-item-action">Quản lý phòng ban</Link>
-                    <Link to="/quanlycapbac" className="list-group-item list-group-item-action ">Quản lý cấp bậc</Link>
-                    <Link to="/quanlynhanvien" className="list-group-item list-group-item-action">Quản lý nhân viên</Link>
-                    <Link to="/quanlychiphi" className="list-group-item list-group-item-action">Quản lý chi phí</Link>
-                    <Link to="/quanlydinhmuc" className="list-group-item list-group-item-action">Quản lý định mức</Link>
-                    <Link to="/quanlychuyencongtac" className="list-group-item list-group-item-action">Quản lý chuyến công tác</Link>
-                    <Link to="/nhanviencongtac" className="list-group-item list-group-item-action">Quản lý nhân viên công tác</Link>
-                    <Link to="/quanlydexuatthanhtoan" className="list-group-item list-group-item-action">Quản lý đề xuất thanh toán</Link>
-                    <Link to="/baocaonhanvien" className="list-group-item list-group-item-action">Báo cáo</Link>
-
-
-
+                <div>
+                    <ul className="list-group">
+                    <li className="list-group-item list-group-item-action">
+                        <div>Chức năng</div>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlyphongban">Quản lý phòng ban</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlycapbac">Quản lý cấp bậc</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                            <Link to="/quanlynhanvien">Quản lý nhân viên</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlychiphi">Quản lý chi phí</Link>
+                    </li>            
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlydinhmuc" >Quản lý định mức</Link>
+                    </li>            
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlychuyencongtac">Quản lý chuyến công tác</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/nhanviencongtac">Quản lý nhân viên công tác</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlydexuatthanhtoan">Quản lý đề xuất thanh toán</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/baocaonhanvien" >Báo cáo</Link>
+                    </li>
+                    </ul>
                 </div>
 
 
@@ -65,71 +83,146 @@ export default class Nav extends Component {
         }
         if (data.roleID === "RL03") {
             return (
-                <div className="list-group ">
-
-                    <a href="#" className="list-group-item list-group-item-action disabled mt-3">QLNV</a>
-                    <Link to="/quanlyphongban" className="list-group-item list-group-item-action">Quản lý phòng ban</Link>
-                    <Link to="/quanlycapbac" className="list-group-item list-group-item-action ">Quản lý cấp bậc</Link>
-                    <Link to="/quanlynhanvien" className="list-group-item list-group-item-action">Quản lý nhân viên</Link>
-                    <Link to="/quanlychiphi" className="list-group-item list-group-item-action">Quản lý chi phí</Link>
-                    <Link to="/quanlydinhmuc" className="list-group-item list-group-item-action">Quản lý định mức</Link>
-                    <Link to="/quanlychuyencongtac" className="list-group-item list-group-item-action">Quản lý chuyến công tác</Link>
-                    <Link to="/nhanviencongtac" className="list-group-item list-group-item-action">Quản lý nhân viên công tác</Link>
-                    <Link to="/quanlydexuatthanhtoan" className="list-group-item list-group-item-action">Quản lý đề xuất thanh toán</Link>
-                    <Link to="/duyetdexuatthanhtoan" className="list-group-item list-group-item-action">Duyệt đề xuất thanh toán</Link>
-                    <Link to="/baocaotruongbophan" className="list-group-item list-group-item-action">Báo cáo</Link>
-
+                <div>
+                    <ul className="list-group">
+                    <li className="list-group-item list-group-item-action">
+                        <div>Chức năng</div>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                        <Link to="/quanlyphongban">Quản lý phòng ban</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlycapbac" >Quản lý cấp bậc</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlynhanvien" >Quản lý nhân viên</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychiphi">Quản lý chi phí</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydinhmuc">Quản lý định mức</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychuyencongtac">Quản lý chuyến công tác</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/nhanviencongtac" >Quản lý nhân viên công tác</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydexuatthanhtoan" >Quản lý đề xuất thanh toán</Link>
+                    </li>
+                    
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/duyetdexuatthanhtoan" >Duyệt đề xuất thanh toán</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/baocaotruongbophan">Báo cáo</Link>
+                    </li>   
+                    </ul>
                 </div>
             )
         }
         if (data.roleID === "RL04") {
             return (
-                <div className="list-group ">
-
-                    <a href="#" className="list-group-item list-group-item-action disabled mt-3">QLNV</a>
-                    <Link to="/quanlyphongban" className="list-group-item list-group-item-action">Quản lý phòng ban</Link>
-                    <Link to="/quanlycapbac" className="list-group-item list-group-item-action ">Quản lý cấp bậc</Link>
-                    <Link to="/quanlynhanvien" className="list-group-item list-group-item-action">Quản lý nhân viên</Link>
-                    <Link to="/quanlychiphi" className="list-group-item list-group-item-action">Quản lý chi phí</Link>
-                    <Link to="/quanlydinhmuc" className="list-group-item list-group-item-action">Quản lý định mức</Link>
-                    <Link to="/quanlychuyencongtac" className="list-group-item list-group-item-action">Quản lý chuyến công tác</Link>
-                    <Link to="/nhanviencongtac" className="list-group-item list-group-item-action">Quản lý nhân viên công tác</Link>
-                    <Link to="/quanlydexuatthanhtoan" className="list-group-item list-group-item-action">Quản lý đề xuất thanh toán</Link>
-                    <Link to="/duyetdexuatthanhtoan" className="list-group-item list-group-item-action">Duyệt đề xuất thanh toán</Link>
-                    <Link to="/quanlythanhtoan" className="list-group-item list-group-item-action">Quản lý thanh toán</Link>
-                    <Link to="/baocaolanhdao" className="list-group-item list-group-item-action">Báo cáo </Link>
-
-
+                <div>
+                    <ul className="list-group">
+                    <li className="list-group-item list-group-item-action">
+                        <div>Chức năng</div>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlyphongban">Quản lý phòng ban</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlycapbac">Quản lý cấp bậc</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/quanlynhanvien">Quản lý nhân viên</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychiphi">Quản lý chi phí</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydinhmuc" >Quản lý định mức</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychuyencongtac">Quản lý chuyến công tác</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/nhanviencongtac" >Quản lý nhân viên công tác</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydexuatthanhtoan">Quản lý đề xuất thanh toán</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/duyetdexuatthanhtoan" >Duyệt đề xuất thanh toán</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/quanlythanhtoan">Quản lý thanh toán</Link>
+                    </li><li className="list-group-item list-group-item-action">
+                    <Link to="/baocaolanhdao">Báo cáo </Link>
+                    </li>
+                    </ul>
                 </div>
 
             )
         }
         if (data.roleID === "RL05") {
             return (
-                <div className="list-group ">
-                    <a href="#" className="list-group-item list-group-item-action disabled mt-3">QLNV</a>
-                    <Link to="/quanlyphongban" className="list-group-item list-group-item-action">Quản lý phòng ban</Link>
-                    <Link to="/quanlycapbac" className="list-group-item list-group-item-action ">Quản lý cấp bậc</Link>
-                    <Link to="/quanlynhanvien" className="list-group-item list-group-item-action">Quản lý nhân viên</Link>
-                    <Link to="/quanlychiphi" className="list-group-item list-group-item-action">Quản lý chi phí</Link>
-                    <Link to="/quanlydinhmuc" className="list-group-item list-group-item-action">Quản lý định mức</Link>
-                    <Link to="/quanlychuyencongtac" className="list-group-item list-group-item-action">Quản lý chuyến công tác</Link>
-                    <Link to="/nhanviencongtac" className="list-group-item list-group-item-action">Quản lý nhân viên công tác</Link>
-                    <Link to="/quanlydexuatthanhtoan" className="list-group-item list-group-item-action">Quản lý đề xuất thanh toán</Link>
-                    <Link to="/duyetdexuatthanhtoan" className="list-group-item list-group-item-action">Duyệt đề xuất thanh toán</Link>
-                    <Link to="/baocaolanhdao" className="list-group-item list-group-item-action">Báo cáo </Link>
+                <div>
+                    <ul className="list-group">
+                    <li className="list-group-item list-group-item-action">
+                        <div>Chức năng</div>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlyphongban">Quản lý phòng ban</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlycapbac">Quản lý cấp bậc</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlynhanvien">Quản lý nhân viên</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychiphi">Quản lý chi phí</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydinhmuc">Quản lý định mức</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychuyencongtac">Quản lý chuyến công tác</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/nhanviencongtac">Quản lý nhân viên công tác</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydexuatthanhtoan">Quản lý đề xuất thanh toán</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/duyetdexuatthanhtoan">Duyệt đề xuất thanh toán</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/baocaolanhdao">Báo cáo </Link>
+                    </li>
+                    </ul>
                 </div>
             )
         }
         if (data.roleID === "RL01") {
             return (
-                <div className="list-group ">
-                    <a href="#" className="list-group-item list-group-item-action disabled mt-3">QLNV</a>
-                    <Link to="/quanlyphongban" className="list-group-item list-group-item-action">Quản lý phòng ban</Link>
-                    <Link to="/quanlycapbac" className="list-group-item list-group-item-action ">Quản lý cấp bậc</Link>
-                    <Link to="/quanlynhanvien" className="list-group-item list-group-item-action">Quản lý nhân viên</Link>
-                    <Link to="/quanlychiphi" className="list-group-item list-group-item-action">Quản lý chi phí</Link>
-                    <Link to="/quanlydinhmuc" className="list-group-item list-group-item-action">Quản lý định mức</Link>
+                <div>
+                    <ul className="list-group">
+                    <li className="list-group-item list-group-item-action">
+                        <div>Chức năng</div>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlyphongban">Quản lý phòng ban</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlycapbac">Quản lý cấp bậc</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlynhanvien">Quản lý nhân viên</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlychiphi">Quản lý chi phí</Link>
+                    </li>
+                    <li className="list-group-item list-group-item-action">
+                    <Link to="/quanlydinhmuc">Quản lý định mức</Link>
+                    </li>
+                </ul>
                 </div>
             )
         }

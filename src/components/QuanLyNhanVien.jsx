@@ -118,15 +118,17 @@ class QuanLyNhanVien extends Component {
     hienThiTenChucVu = () => {
         return (
             this.state.dataChucVu.map((value, key) => (
-                <option>{value.roleName}</option>
-
+                <option>{value.roleName}
+                    
+                </option>
+                
             ))
         )
     }
     hienThiTenCapBac = () => {
         return (
             this.state.dataCapBac.map((value, key) => (
-                <option>{value.tenCapBac}</option>
+                <option selected="selected" value={value.tenCapBac}>{value.tenCapBac}</option>
             ))
         )
     }
@@ -184,7 +186,6 @@ class QuanLyNhanVien extends Component {
     layDataSua = (value) => {
 
         this.setState({ hienThiSuaUer: value });
-        console.log(this.state.hienThiSuaUer);
         console.log(this.state.data);
 
 
@@ -216,6 +217,7 @@ class QuanLyNhanVien extends Component {
             this.state.dataPhongBan.map((value, key) => {
                 if (value.tenPhongBan === this.state.tenPhongBan) {
                     this.state.maPhongBan = value.maPhongBan;
+                    console.log("huynh"+value.maPhongBan);
                 }
             })
             // var maNhanVien = this.state.hienThiSuaUer.maNhanVien
@@ -292,7 +294,7 @@ class QuanLyNhanVien extends Component {
         if (this.state.dataUsers.roleID === "RL01" || this.state.dataUsers.roleID === "RL05") {
             return (
                 <td>
-                    <div className="btn btn-warning btn-group" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-warning btn-group">
                         <div className="fa fa-edit" data-toggle="modal" data-target="#sua" onClick={() => this.layDataSua(value)}>Sửa</div>
                         {/* <!-- begin them moi --> */}
                         <div class="modal fade" id="sua" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -378,7 +380,7 @@ class QuanLyNhanVien extends Component {
                 <div class="row-container">
                     <Nav></Nav>
                     <div className="table-manager" style={{ padding: '0 25px 0 0' }}>
-                        <h1 className="heading-manager">Quản lý nhân viên</h1>
+                        <div className="heading-manager">Quản lý nhân viên</div>
                         <div className="">
                             {/* begin search */}
                             <div className="d-flex justify-content-between" >

@@ -6,6 +6,7 @@ import Nav from './Nav';
 import Header from './Header';
 import Footer from './Footer';
 
+
 class QuanLyPhongBan extends Component {
     constructor(props) {
         super(props);
@@ -86,18 +87,17 @@ class QuanLyPhongBan extends Component {
             }
         })
             .then((res) => res.data)
+            .then((res) => this.props.alertOn_TrangThaiThemMoiThanhCong(res) /*? items.push(item) : null*/)
             .then(() => { window.location.reload() })
-            .then((res) => this.props.alertOn_TrangThaiThemMoiThanhCong(res) ? items.push(item) : null)
-
             .catch(err => this.props.alertOn_TrangThaiThemMoiThatBai(err));
 
     }
 
     layDataSua = (value) => {
-
         this.setState({ hienThiSuaUer: value });
     }
     onSua = () => {
+        
         if (window.confirm("Bạn có chắc chắn muốn sửa")) {
             var dataSua = {};
             dataSua.maPhongBan = this.state.hienThiSuaUer.maPhongBan; //this.state.hienThiSuaUer.maPhongBan là data onChange nhập vào
@@ -113,7 +113,6 @@ class QuanLyPhongBan extends Component {
             })
             var maPhongBan = this.state.hienThiSuaUer.maPhongBan
             // console.log(maPhongBan);
-
             axios({
                 method: 'PUT',
                 url: 'https://localhost:5001/api/PhongBan/' + maPhongBan,
@@ -126,12 +125,15 @@ class QuanLyPhongBan extends Component {
                     ngayThanhLap: this.state.ngayThanhLap
                 }
             }).then((res) => res.data)
-                .then((res) => this.props.alertOn_TrangThaiSuaThanhCong(res))
+                .then((res) => {this.props.alertOn_TrangThaiSuaThanhCong(res);
+                    window.location.reload()})
+                //.then(() => { window.location.reload() })
                 .catch(err => this.props.alertOn_TrangThaiSuaThatBai(err))
-
-
+                
         }
+        //window.location.reload()
     }
+    
     onDelete = (maPhongBan) => {
         if (window.confirm("Bạn có chắc chắn muốn xóa")) {
             // console.log(maPhongBan);
@@ -192,7 +194,7 @@ class QuanLyPhongBan extends Component {
             return (
 
                 < td >
-                    <div className="btn btn-warning btn-group" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-warning btn-group" >
                         <div className="fa fa-edit" data-toggle="modal" data-target="#sua" onClick={() => this.layDataSua(value)}>Sửa</div>
 
 
@@ -216,11 +218,11 @@ class QuanLyPhongBan extends Component {
                                                 <div className="form-group">
                                                     <div className="form-group" >
                                                         <p style={{ textAlign: 'left' }}>Mã phòng ban</p>
-                                                        <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Mã phòng ban" name="maPhongBan" Value={this.state.hienThiSuaUer.maPhongBan} onChange={(event) => this.onChange(event)} />
+                                                        <input type="text" className="form-control"  placeholder="Mã phòng ban" name="maPhongBan" Value={this.state.hienThiSuaUer.maPhongBan} onChange={(event) => this.onChange(event)} />
                                                         <p style={{ textAlign: 'left' }}>Tên phòng ban</p>
-                                                        <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Tên phòng ban" name="tenPhongBan" Value={this.state.hienThiSuaUer.tenPhongBan} onChange={(event) => this.onChange(event)} />
+                                                        <input type="text" className="form-control"  placeholder="Tên phòng ban" name="tenPhongBan" Value={this.state.hienThiSuaUer.tenPhongBan} onChange={(event) => this.onChange(event)} />
                                                         <p style={{ textAlign: 'left' }}>Ngày thành lập</p>
-                                                        <input type="date" className="form-control" name id aria-describedby="helpId" placeholder="Ngày thành lập (YYYY-MM-DD)" name="ngayThanhLap" Value={this.state.hienThiSuaUer.ngayThanhLap} onChange={(event) => this.onChange(event)} />
+                                                        <input type="date" className="form-control"  placeholder="Ngày thành lập (DD-MM-YYYY)" name="ngayThanhLap" Value={this.state.hienThiSuaUer.ngayThanhLap} onChange={(event) => this.onChange(event)} />
 
                                                     </div>
                                                 </div>
@@ -238,7 +240,7 @@ class QuanLyPhongBan extends Component {
                     </div>
 
                     {/* end them moi */}
-                    <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-danger btn-group ml-2">
                         <div className="fas fa-ban" onClick={() => this.onDelete(value.maPhongBan)}>Xóa</div>
 
                     </div>
@@ -251,7 +253,8 @@ class QuanLyPhongBan extends Component {
     hienThiThaoTac = () => {
         if (this.state.dataUsers.roleID === "RL01" || this.state.dataUsers.roleID === "RL05") {
             return (
-                <th>Thao tác</th>
+                //style=" "
+                <th style={{ paddingLeft: '45px' }}>Thao tác</th>
             )
 
         }
@@ -262,12 +265,13 @@ class QuanLyPhongBan extends Component {
 
         return (
             <div>
-                <Header ></Header>
+                <Header>
+                </Header>
 
                 <div class="row-container">
                     <Nav></Nav>
                     <div className="table-manager" style={{ padding: '0 25px 0 0' }}>
-                        <h1 className="heading-manager">Quản lý phòng ban</h1>
+                        <div className="heading-manager" ><i class="fas fa-home"></i>  Quản lý phòng ban</div>
                         <div className="">
                             {/* begin search */}
                             <div className="d-flex justify-content-between" >
@@ -279,7 +283,7 @@ class QuanLyPhongBan extends Component {
                                                 <i class="fas fa-search"></i>
                                             </span>
                                         </div>
-                                        <input type="text" className="form-control" placeholder="Search ..." name="searchItem" value={this.state.searchItem} onChange={(event) => this.onChange(event)} />
+                                        <input type="text" className="form-control" placeholder="Tìm kiếm" name="searchItem" value={this.state.searchItem} onChange={(event) => this.onChange(event)} />
                                     </div>
                                 </div>
                                 {/* end search */}
@@ -306,11 +310,11 @@ class QuanLyPhongBan extends Component {
                                                     <div className="form-group">
                                                         <div className="form-group" >
                                                             <p style={{ textAlign: 'left' }}>Mã phòng ban</p>
-                                                            <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Mã phòng ban" name="maPhongBan" onChange={(event) => this.onChange(event)} />
+                                                            <input  type="text" className="form-control"  placeholder="Mã phòng ban" name="maPhongBan" onChange={(event) => this.onChange(event)} />
                                                             <p style={{ textAlign: 'left' }}>Tên phòng ban</p>
-                                                            <input type="text" className="form-control" name id aria-describedby="helpId" placeholder="Tên phòng ban" name="tenPhongBan" onChange={(event) => this.onChange(event)} />
+                                                            <input type="text" className="form-control" placeholder="Tên phòng ban" name="tenPhongBan" onChange={(event) => this.onChange(event)} />
                                                             <p style={{ textAlign: 'left' }}>Ngày thành lập</p>
-                                                            <input type="date" className="form-control" name id aria-describedby="helpId" placeholder="Ngày thành lập (YYYY-MM-DD)" name="ngayThanhLap" onChange={(event) => this.onChange(event)} />
+                                                            <input type="date" className="form-control"  placeholder="Ngày thành lập (YYYY-MM-DD)" name="ngayThanhLap" onChange={(event) => this.onChange(event)} />
 
                                                         </div>
                                                     </div>
@@ -368,7 +372,7 @@ const mapStateToProps = (state /*, ownProps*/) => {
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        alertOn_TrangThaiThemMoiThanhCong: () => { dispatch(actions.alertOn_TrangThaiThemMoiThanhCong()) },
+        alertOn_TrangThaiThemMoiThanhCong: () => { dispatch(actions.alertOn_TrangThaiThemMoiThanhCong(),2000) },
         alertOff_TrangThaiThemMoiThanhCong: () => { dispatch(actions.alertOff_TrangThaiThemMoiThanhCong()) },
         alertOn_TrangThaiThemMoiThatBai: () => { dispatch(actions.alertOn_TrangThaiThemMoiThatBai()) },
         alertOff_TrangThaiThemMoiThatBai: () => { dispatch(actions.alertOff_TrangThaiThemMoiThatBai()) },

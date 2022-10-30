@@ -371,10 +371,10 @@ class DuyetDeXuatThanhToan extends Component {
             return (
                 <td>
                     <div>
-                        <div className="btn btn-primary btn-group ml-2" style={{ fontSize: "22px" }}>
+                        <div className="btn btn-primary btn-group ml-2">
                             <div className="fa fa-edit" onClick={() => this.duyetDeXuat(value.maDeXuat, value)} > Duyệt</div>
                         </div>
-                        <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                        <div className="btn btn-danger btn-group ml-2" >
                             <div className="fas fa-ban" data-toggle="modal" data-target="#tuChoi" onClick={() => this.layMaTuChoi(value.maDeXuat)} > Từ chối</div>
 
                         </div>

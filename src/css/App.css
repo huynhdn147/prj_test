@@ -38,12 +38,22 @@ mt-2 {
 }
 #header-logo-img {
     position: absolute;
-    width: 120px;
+    width: 200px;
     height: 120px;
     border-radius: 50%;
     display: block;
     left: 50%;
     transform: translateX(-50%);
+}
+#header-logo-img2 {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: block;
+    left: 10%;
+    transform: translateX(-50%);
+    padding-right: 5px;
 }
 .login-container .title-login {
     position: absolute;
@@ -128,31 +138,37 @@ mt-2 {
 .header {
     background-color: whitesmoke;
     width: 100%;
-    height: 100px;
+    height: 85px;
 }
 .home-page {
-    padding: 28px;
+    padding: 9px;
     float: left;
-    font-size: 30px;
+    font-size: 20px;
     position: relative;
+    width: 253px;
+    height: 83px;
+    text-align: center;
+    padding-left: 16px;
+    background: white;
 }
 .logout_username {
-    padding: 28px;
-    font-size: 30px;
+    padding: 10px;
+    font-size: 22px;
 }
 .user-login {
     display: inline-block;
     position: absolute;
-    top: 20px;
+    top: 12px;
     right: 220px;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: bold;
 }
 .logout {
     position: absolute;
     top: 0px;
     right: 0;
-    padding: 28px;
+    padding-right: 16px;
+    padding-top: 15px;
 }
 .icon-nav-bar {
     width: 50px;
@@ -171,11 +187,10 @@ mt-2 {
     width: 100%;
     display: grid;
     grid-template-columns: 16% 83%;
-    grid-gap: 20px;
+    grid-gap: 3px;
 }
 .nav-bar {
     height: auto;
-    margin: 40px 30px;
 }
 .content-home {
     margin-top: 55px;
@@ -185,7 +200,9 @@ mt-2 {
 .themmoi {
     position: absolute;
     right: 54px;
-    width: 200px;
+    margin-top: 12px;
+    width: 120px;
+    height: 40px;
 }
 .thanh-toan {
     text-align: left;
@@ -197,7 +214,12 @@ mt-2 {
 
 /* TABLE */
 .heading-manager {
-    text-align: center;
+    box-shadow: 1px 1px 0px 0px rgba(0, 0, 0, 0.5);
+    text-align: left;
+    font-size: 26px;
+    margin-top: 6px;
+    width: 103%;
+    font-weight: bold;
 }
 /* FOOTER*/
 #footer {
@@ -213,4 +235,15 @@ mt-2 {
     position: absolute;
     left: 0;
     right: 0;
+}
+.heading-manager
+{
+    
+}
+.form-control{
+    margin-top: 8px;
+}
+.input-group-prepend {
+    margin-right: -1px;
+    margin-top: 8px;
 }

@@ -146,7 +146,7 @@ class QuanLyCapBac extends Component {
         var { data, searchItem } = this.state;
         var dataSearch = [];
         data.forEach((item) => {
-            if (item.maCapBac.toLowerCase().indexOf(searchItem) !== -1 || item.tenCapBac.toLowerCase().indexOf(searchItem) !== -1 || item.moTa.toLowerCase().indexOf(searchItem) !== -1) {
+            if (item.tenCapBac?.toLowerCase().indexOf(searchItem) !== -1) {
                 dataSearch.push(item)
             }
         })
@@ -180,7 +180,7 @@ class QuanLyCapBac extends Component {
             return (
                 <td>
 
-                    <div className="btn btn-warning btn-group" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-warning btn-group">
                         <div className="fa fa-edit" data-toggle="modal" data-target="#sua" onClick={() => this.layDataSua(value)}>Sửa</div>
                         {/* <!-- begin them moi --> */}
                         <div class="modal fade" id="sua" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -223,7 +223,7 @@ class QuanLyCapBac extends Component {
                         </div>
                         {/* end them moi */}
                     </div>
-                    <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-danger btn-group ml-2">
                         <div className="fas fa-ban" onClick={() => this.onDelete(value.maCapBac)} > Xóa</div>
                     </div>
                 </td>

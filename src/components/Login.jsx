@@ -52,7 +52,7 @@ class login extends Component {
             <div className="container-login">
                 <div className="login">
                     <div className="login-container">
-                        <img id="header-logo-img" src="https://login.thanglong.edu.vn/images/logotlu.jpg" alt="" />
+                        <img id="header-logo-img" src="https://iappmedia.vn/_next/image?url=https%3A%2F%2Fcms.iappmedia.vn%2Fuploads%2FLOGO_IAPPTECH_SMALL_efeb68a4e2.png&w=1920&q=75" alt="" />
                         <h2 className="title-login">Đăng nhập</h2>
                         <form action className="form-login">
                             <div className="icon-user">
@@ -72,13 +72,13 @@ class login extends Component {
                                 <label className="checkbox-label" htmlFor>Remember me</label>
                             </div>
                             <button type="button" className="btn-login" onClick={() => this.login()}>Login</button>
-                            <div className="forgot-password">
+                            {/* <div className="forgot-password">
                                 <a href="#" className="forgot-pw">Forgot password ?</a>
                             </div>
                             <button className="login-gg" onClick={(event) => this.loginGG(event)}>
                                 <i className="fab fa-google icon-login-gg" />
                                 Sign in with Google
-                            </button>
+                            </button> */}
                         </form>
                     </div>
                 </div>

@@ -470,7 +470,7 @@ class QuanLyDeXuatThanhToan extends Component {
                     <td>
                         {
                             value.tinhTrang === "Chua xet duyet" ?
-                                <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                                <div className="btn btn-danger btn-group ml-2">
                                     <div className="fas fa-ban" onClick={() => this.onDeleteDeXuatThanhToan(value.maDeXuat)}> Xóa</div>
                                 </div> :
                                 null
@@ -508,7 +508,7 @@ class QuanLyDeXuatThanhToan extends Component {
                     <td>{value.tenChiPhi}</td>
                     <td>{value.soTienChiTieu}</td>
                     <td>
-                        <div className="btn btn-danger btn-group ml-2" style={{ fontSize: "22px" }}>
+                        <div className="btn btn-danger btn-group ml-2">
                             <div className="fa fa-edit" onClick={() => this.onDeleteDeXuat(value.maChuyenCongTac, value.maChiPhi)}> Xóa</div>
                         </div>
                     </td>

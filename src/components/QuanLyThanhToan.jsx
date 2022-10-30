@@ -486,7 +486,7 @@ class QuanLyThanhToan extends Component {
         if (value.tinhTrang === "Da Thanh Toan") {
             return (
                 <td>
-                    <div className="btn btn-danger thanh-toan" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-danger thanh-toan">
                         <div className="fas fa-ban " >
                             <span className="ml-2">
                                 Đã thanh toán
@@ -514,7 +514,7 @@ class QuanLyThanhToan extends Component {
         if (value.tinhTrang.indexOf("Phong ke toan") !== -1 || value.tinhTrang.indexOf("Truong bo phan") !== -1) {
             return (
                 <td>
-                    <div className="btn btn-warning thanh-toan" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-warning thanh-toan">
                         <div className="fa fa-edit" id="thanhToan">
                             <span className="ml-2">
                                 Đang xét duyệt
@@ -528,7 +528,7 @@ class QuanLyThanhToan extends Component {
         if (value.tinhTrang.indexOf("Chua xet duyet") !== -1) {
             return (
                 <td>
-                    <div className="btn btn-secondary thanh-toan" style={{ fontSize: "22px" }}>
+                    <div className="btn btn-secondary thanh-toan">
                         <div className="fa fa-edit" id="thanhToan">
                             <span className="ml-2">
                                 Chờ xét duyệt
