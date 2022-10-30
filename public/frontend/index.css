@@ -1,0 +1,146 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* body {
+    background-image: url(./bg-01.jpg);
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+mt-2 {
+    top: 2px;
+}
+.login {
+    width: 500px;
+    max-width: 500px;
+    height: 800px;
+    position: relative;
+    background-color: #9152f8;
+    border-radius: 3px;
+}
+.login .login-container {
+    top: 0;
+    position: absolute;
+    width: 400px;
+    height: 700px;
+    /* display: flex;
+    justify-content: center; */
+    top: 56px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+#header-logo-img {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.login-container .title-login {
+    position: absolute;
+    display: block;
+    text-align: center;
+    margin-top: 150px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.form-login {
+    position: absolute;
+    width: 100%;
+    top: 230px;
+    height: 200px;
+}
+.form-login .icon-user {
+    padding: 4px 0px;
+    font-size: 20px;
+    color: white;
+}
+.input-text {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+}
+.checkbox-login {
+    padding: 8px 0px;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+.form-login .checkbox-login .checkbox {
+    width: 20px;
+    height: 20px;
+}
+.form-login .checkbox-login .checkbox-label {
+    width: 100%;
+    font-size: 16px;
+    margin: 8px;
+    color: white;
+}
+.btn-login {
+    margin-top: 16px;
+    width: 100%;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    padding: 5px;
+}
+.forgot-password {
+    margin: 16px 0px;
+}
+.forgot-password .forgot-pw {
+    color: white;
+}
+.login-gg {
+    width: 100%;
+    height: 50px;
+    background: whitesmoke;
+    text-align: center;
+    color: black;
+    font-size: 20px;
+    line-height: 50px;
+    border-radius: 4px;
+    border: none;
+}
+.icon-login-gg {
+    margin-right: 3px;
+    font-size: 25px;
+}
+
+/* HEADER */
+.header {
+    background-color: whitesmoke;
+    width: 100vw;
+    height: 100px;
+}
+.home-page {
+    padding: 16px;
+    float: left;
+    font-size: 30px;
+}
+.logout {
+    text-align: right;
+    padding: 16px;
+    float: left;
+    font-size: 30px;
+}
+.show-username {
+    display: inline-block;
+    margin-right: 100px;
+}
